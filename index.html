@@ -2,18 +2,28 @@
 
 <h2>UFO Sightings Over Time</h2>
 <p>
-This visualization shows the number of UFO sightings over time. The x-axis represents the year, derived from the datetime variable, and the y-axis shows the total number of sightings. A line chart was chosen to highlight trends over time.
+This visualization shows the number of UFO sightings over time. The x-axis represents the year, which was extracted from the datetime variable using pandas, and the y-axis shows the total number of sightings. A line chart was chosen because it effectively displays trends and patterns over time, making it easier to observe increases or decreases in sightings. Data transformation included converting the datetime column to a proper datetime format and extracting the year for aggregation.
 </p>
 
 <iframe src="chart1.html" width="800" height="500"></iframe>
 
 <h2>UFO Sightings by Shape</h2>
 <p>
-This visualization shows the number of UFO sightings by shape using a bar chart. The x-axis represents UFO shape categories, and the y-axis shows the count of sightings. Color is used to distinguish between categories.
+This visualization shows the number of UFO sightings by shape using a bar chart. The x-axis represents UFO shape categories, and the y-axis shows the count of sightings. A bar chart was chosen because it allows for clear comparison between categorical values. Color encoding is used to distinguish between different shape categories, improving readability.
 </p>
 
 <p>
-Interactivity was added through a dropdown menu that allows users to filter sightings by shape. This helps users explore the data more deeply and focus on specific categories.
+Interactivity was added through a dropdown menu that allows users to filter sightings by shape. This feature enables users to explore specific categories more closely and reduces visual clutter when focusing on particular shapes.
 </p>
 
 <iframe src="chart2.html" width="800" height="500"></iframe>
+<h2>Links</h2>
+<p>
+<a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/ufo-scrubbed-geocoded-time-standardized-00.csv">
+The Data
+</a>
+<br>
+<a href="https://github.com/light-honey/ufo-dataviz/blob/main/jek.ipynb">
+The Analysis (Python Notebook)
+</a>
+</p>
