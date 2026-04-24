@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-7cbc35f26793ac7bdff12a2a3d8a858f"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "shape", "legend": null, "type": "nominal"}, "x": {"field": "shape", "title": "UFO Shape", "type": "nominal"}, "y": {"field": "count", "title": "Number of Sightings", "type": "quantitative"}}, "params": [{"name": "param_45498e604d522750", "select": {"type": "point", "fields": ["shape"]}, "bind": {"input": "select", "options": ["All", "changed", "changing", "chevron", "cigar", "circle", "cone", "crescent", "cross", "cylinder", "delta", "diamond", "disk", "dome", "egg", "fireball", "flare", "flash", "formation", "hexagon", "light", "other", "oval", "pyramid", "rectangle", "round", "sphere", "teardrop", "triangle", "unknown"], "name": "Select Shape: "}}], "title": "UFO Sightings by Shape", "transform": [{"filter": {"param": "param_45498e604d522750", "empty": true}}], "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-7cbc35f26793ac7bdff12a2a3d8a858f": [{"shape": "changed", "count": 1}, {"shape": "changing", "count": 1962}, {"shape": "chevron", "count": 952}, {"shape": "cigar", "count": 2057}, {"shape": "circle", "count": 7608}, {"shape": "cone", "count": 316}, {"shape": "crescent", "count": 2}, {"shape": "cross", "count": 233}, {"shape": "cylinder", "count": 1283}, {"shape": "delta", "count": 7}, {"shape": "diamond", "count": 1178}, {"shape": "disk", "count": 5213}, {"shape": "dome", "count": 1}, {"shape": "egg", "count": 759}, {"shape": "fireball", "count": 6208}, {"shape": "flare", "count": 1}, {"shape": "flash", "count": 1328}, {"shape": "formation", "count": 2457}, {"shape": "hexagon", "count": 1}, {"shape": "light", "count": 16565}, {"shape": "other", "count": 5649}, {"shape": "oval", "count": 3733}, {"shape": "pyramid", "count": 1}, {"shape": "rectangle", "count": 1297}, {"shape": "round", "count": 2}, {"shape": "sphere", "count": 5387}, {"shape": "teardrop", "count": 750}, {"shape": "triangle", "count": 7865}, {"shape": "unknown", "count": 5584}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
